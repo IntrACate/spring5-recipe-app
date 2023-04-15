@@ -6,10 +6,15 @@
 </head>
 <body>
     <h1>My Recipes!</h1>
-    <h2>Recipe Name</h2>
-    <h3>Ingredients</h3>
-    <ul>
-        <li>Ingredient 1</li>
-    </ul>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+        </tr>
+        <tr th:each="recipe : ${recipes}">
+            <td th:text="${recipe.id}">123</td>
+            <td th:text="${recipe.description}">Recipe description</td>
+        </tr>
+    </table>
 </body>
 </html>
